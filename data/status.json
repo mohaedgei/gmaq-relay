@@ -1,1 +1,1 @@
-{"d": [{"last": "server initialized", "ts": 0}]}
+{"d": [{"last": "server initialized", "ts": 0}, {"last": "token rejected (E2E-TEST): HTTP 401: {\n  \"error\" : \"Permission denied\"\n}\n", "ts": 1791639123426, "from": "bot"}]}
