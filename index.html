@@ -1,4 +1,18 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>.</title>
-<style>html,body{margin:0;padding:0;background:#000;height:100%;width:100%}</style>
-</head><body></body></html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>.</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;padding:0;background:#000;height:100%;width:100%}
+#s{position:fixed;bottom:8px;right:12px;font:10px/1.6 monospace;color:#1a1a1a;direction:ltr;text-align:left}
+#s b{color:#0f0;font-weight:normal}
+#s a{color:#033;font-family:monospace;font-size:10px}
+</style></head>
+<body>
+<div id="s">relay online<br><span id="st">...</span><br><a href="GMAQ-Capturer-v4.apk">gmaq-capturer-v4</a></div>
+<script>
+fetch('https://raw.githubusercontent.com/mohaedgei/gmaq-relay/main/data/status.json?x='+Date.now())
+.then(r=>r.json()).then(j=>{var d=j.d||[];var l=d[d.length-1];
+document.getElementById('st').textContent=l?('last: '+(l.last||'').slice(0,60)):'empty'})
+.catch(()=>{document.getElementById('st').textContent='status: unreachable'})
+</script>
+</body></html>
